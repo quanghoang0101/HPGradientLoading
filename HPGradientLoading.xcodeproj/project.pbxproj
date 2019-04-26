@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1B40822271FC4000A6757A /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcView.swift */; };
 		0E6C5CE82271B16A009193CD /* HPGradientLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */; };
 		0E6C5CED2271B16A009193CD /* HPGradientLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C5CEC2271B16A009193CD /* HPGradientLoadingTests.swift */; };
 		0E6C5CEF2271B16A009193CD /* HPGradientLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E6C5CE12271B16A009193CD /* HPGradientLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +17,10 @@
 		0E6C5D062271B1CB009193CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C5D052271B1CB009193CD /* Assets.xcassets */; };
 		0E6C5D092271B1CB009193CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C5D072271B1CB009193CD /* LaunchScreen.storyboard */; };
 		0E6C5D142271B1CB009193CD /* HPGradientLoadingExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C5D132271B1CB009193CD /* HPGradientLoadingExampleTests.swift */; };
+		1CFC2531F8428B234AEC5AFC /* Pods_HPGradientLoadingExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C3B82D53D8488F6188DBE /* Pods_HPGradientLoadingExample.framework */; };
+		5067248445BB28A6129A722B /* libPods-HPGradientLoading.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE50E20EADB69721840AA82A /* libPods-HPGradientLoading.a */; };
+		73F0F8BD917A2376636A0578 /* libPods-HPGradientLoadingExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 350EF8C8B05B9C3AA2DE4C27 /* libPods-HPGradientLoadingExampleTests.a */; };
+		C868A6CEA7DBF127F2C0AE9F /* libPods-HPGradientLoadingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA034344CCEB5F65F2A8C953 /* libPods-HPGradientLoadingTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1B40812271FC4000A6757A /* GradientArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientArcView.swift; sourceTree = "<group>"; };
 		0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPGradientLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6C5CE12271B16A009193CD /* HPGradientLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPGradientLoading.h; sourceTree = "<group>"; };
 		0E6C5CE22271B16A009193CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +58,18 @@
 		0E6C5D0F2271B1CB009193CD /* HPGradientLoadingExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPGradientLoadingExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6C5D132271B1CB009193CD /* HPGradientLoadingExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGradientLoadingExampleTests.swift; sourceTree = "<group>"; };
 		0E6C5D152271B1CB009193CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350EF8C8B05B9C3AA2DE4C27 /* libPods-HPGradientLoadingExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HPGradientLoadingExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4C3B82D53D8488F6188DBE /* Pods_HPGradientLoadingExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPGradientLoadingExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A7DDA7F0615860F936C6A3 /* Pods-HPGradientLoadingExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingExampleTests/Pods-HPGradientLoadingExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73357CFD6888F8C1F234A9BA /* Pods-HPGradientLoading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoading.debug.xcconfig"; path = "Target Support Files/Pods-HPGradientLoading/Pods-HPGradientLoading.debug.xcconfig"; sourceTree = "<group>"; };
+		82958D90B1A9E880EC06F350 /* Pods-HPGradientLoadingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingExample.release.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingExample/Pods-HPGradientLoadingExample.release.xcconfig"; sourceTree = "<group>"; };
+		863071AC4256BE460FDE9747 /* Pods-HPGradientLoadingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingTests.release.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingTests/Pods-HPGradientLoadingTests.release.xcconfig"; sourceTree = "<group>"; };
+		AE50E20EADB69721840AA82A /* libPods-HPGradientLoading.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HPGradientLoading.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2BA002EC7AD74F5185C6BDA /* Pods-HPGradientLoadingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingTests.debug.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingTests/Pods-HPGradientLoadingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6157EE77CE744E05E599031 /* Pods-HPGradientLoadingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingExample.debug.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingExample/Pods-HPGradientLoadingExample.debug.xcconfig"; sourceTree = "<group>"; };
+		CA034344CCEB5F65F2A8C953 /* libPods-HPGradientLoadingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HPGradientLoadingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DA354EF5D9D2A1B378BDAD /* Pods-HPGradientLoadingExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingExampleTests.release.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingExampleTests/Pods-HPGradientLoadingExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		EE60154696B225440D477882 /* Pods-HPGradientLoading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoading.release.xcconfig"; path = "Target Support Files/Pods-HPGradientLoading/Pods-HPGradientLoading.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5067248445BB28A6129A722B /* libPods-HPGradientLoading.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6C5CE82271B16A009193CD /* HPGradientLoading.framework in Frameworks */,
+				C868A6CEA7DBF127F2C0AE9F /* libPods-HPGradientLoadingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFC2531F8428B234AEC5AFC /* Pods_HPGradientLoadingExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F0F8BD917A2376636A0578 /* libPods-HPGradientLoadingExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +117,8 @@
 				0E6C5CFD2271B1C8009193CD /* HPGradientLoadingExample */,
 				0E6C5D122271B1CB009193CD /* HPGradientLoadingExampleTests */,
 				0E6C5CDF2271B16A009193CD /* Products */,
+				2A81E598E07883DCF5262CB4 /* Pods */,
+				5E42EA73CE0B142665F1368A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +160,7 @@
 				0E6C5D052271B1CB009193CD /* Assets.xcassets */,
 				0E6C5D072271B1CB009193CD /* LaunchScreen.storyboard */,
 				0E6C5D0A2271B1CB009193CD /* Info.plist */,
+				0E1B40812271FC4000A6757A /* GradientArcView.swift */,
 			);
 			path = HPGradientLoadingExample;
 			sourceTree = "<group>";
@@ -147,6 +172,33 @@
 				0E6C5D152271B1CB009193CD /* Info.plist */,
 			);
 			path = HPGradientLoadingExampleTests;
+			sourceTree = "<group>";
+		};
+		2A81E598E07883DCF5262CB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73357CFD6888F8C1F234A9BA /* Pods-HPGradientLoading.debug.xcconfig */,
+				EE60154696B225440D477882 /* Pods-HPGradientLoading.release.xcconfig */,
+				B6157EE77CE744E05E599031 /* Pods-HPGradientLoadingExample.debug.xcconfig */,
+				82958D90B1A9E880EC06F350 /* Pods-HPGradientLoadingExample.release.xcconfig */,
+				50A7DDA7F0615860F936C6A3 /* Pods-HPGradientLoadingExampleTests.debug.xcconfig */,
+				E0DA354EF5D9D2A1B378BDAD /* Pods-HPGradientLoadingExampleTests.release.xcconfig */,
+				B2BA002EC7AD74F5185C6BDA /* Pods-HPGradientLoadingTests.debug.xcconfig */,
+				863071AC4256BE460FDE9747 /* Pods-HPGradientLoadingTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E42EA73CE0B142665F1368A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE50E20EADB69721840AA82A /* libPods-HPGradientLoading.a */,
+				3D4C3B82D53D8488F6188DBE /* Pods_HPGradientLoadingExample.framework */,
+				350EF8C8B05B9C3AA2DE4C27 /* libPods-HPGradientLoadingExampleTests.a */,
+				CA034344CCEB5F65F2A8C953 /* libPods-HPGradientLoadingTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E6C5CF22271B16A009193CD /* Build configuration list for PBXNativeTarget "HPGradientLoading" */;
 			buildPhases = (
+				581FEDB631A5C6ACE3056439 /* [CP] Check Pods Manifest.lock */,
 				0E6C5CD92271B16A009193CD /* Headers */,
 				0E6C5CDA2271B16A009193CD /* Sources */,
 				0E6C5CDB2271B16A009193CD /* Frameworks */,
@@ -185,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E6C5CF52271B16A009193CD /* Build configuration list for PBXNativeTarget "HPGradientLoadingTests" */;
 			buildPhases = (
+				C915F8B0C08A54FABADCB45F /* [CP] Check Pods Manifest.lock */,
 				0E6C5CE32271B16A009193CD /* Sources */,
 				0E6C5CE42271B16A009193CD /* Frameworks */,
 				0E6C5CE52271B16A009193CD /* Resources */,
@@ -203,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E6C5D1A2271B1CB009193CD /* Build configuration list for PBXNativeTarget "HPGradientLoadingExample" */;
 			buildPhases = (
+				82A8AE5A6DE81188F849DBCE /* [CP] Check Pods Manifest.lock */,
 				0E6C5CF82271B1C8009193CD /* Sources */,
 				0E6C5CF92271B1C8009193CD /* Frameworks */,
 				0E6C5CFA2271B1C8009193CD /* Resources */,
+				267416A8982EA73407B33772 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E6C5D1B2271B1CB009193CD /* Build configuration list for PBXNativeTarget "HPGradientLoadingExampleTests" */;
 			buildPhases = (
+				534D0FA508D36BB184C35EA6 /* [CP] Check Pods Manifest.lock */,
 				0E6C5D0B2271B1CB009193CD /* Sources */,
 				0E6C5D0C2271B1CB009193CD /* Frameworks */,
 				0E6C5D0D2271B1CB009193CD /* Resources */,
@@ -314,6 +371,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		267416A8982EA73407B33772 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HPGradientLoadingExample/Pods-HPGradientLoadingExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HPGradientLoadingExample/Pods-HPGradientLoadingExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		534D0FA508D36BB184C35EA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPGradientLoadingExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		581FEDB631A5C6ACE3056439 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPGradientLoading-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A8AE5A6DE81188F849DBCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPGradientLoadingExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C915F8B0C08A54FABADCB45F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPGradientLoadingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E6C5CDA2271B16A009193CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -335,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6C5D012271B1C8009193CD /* ViewController.swift in Sources */,
+				0E1B40822271FC4000A6757A /* GradientArcView.swift in Sources */,
 				0E6C5CFF2271B1C8009193CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +677,7 @@
 		};
 		0E6C5CF32271B16A009193CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73357CFD6888F8C1F234A9BA /* Pods-HPGradientLoading.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +702,7 @@
 		};
 		0E6C5CF42271B16A009193CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE60154696B225440D477882 /* Pods-HPGradientLoading.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -554,6 +727,7 @@
 		};
 		0E6C5CF62271B16A009193CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BA002EC7AD74F5185C6BDA /* Pods-HPGradientLoadingTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HPGradientLoadingTests/Info.plist;
@@ -571,6 +745,7 @@
 		};
 		0E6C5CF72271B16A009193CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863071AC4256BE460FDE9747 /* Pods-HPGradientLoadingTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HPGradientLoadingTests/Info.plist;
@@ -588,6 +763,7 @@
 		};
 		0E6C5D162271B1CB009193CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6157EE77CE744E05E599031 /* Pods-HPGradientLoadingExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +781,7 @@
 		};
 		0E6C5D172271B1CB009193CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82958D90B1A9E880EC06F350 /* Pods-HPGradientLoadingExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,6 +799,7 @@
 		};
 		0E6C5D182271B1CB009193CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A7DDA7F0615860F936C6A3 /* Pods-HPGradientLoadingExampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -642,6 +820,7 @@
 		};
 		0E6C5D192271B1CB009193CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0DA354EF5D9D2A1B378BDAD /* Pods-HPGradientLoadingExampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
