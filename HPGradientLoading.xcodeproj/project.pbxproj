@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E01F7602272F002005E2CD7 /* HPGradientLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */; };
 		0E1B40822271FC4000A6757A /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcView.swift */; };
 		0E6C5CE82271B16A009193CD /* HPGradientLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */; };
 		0E6C5CED2271B16A009193CD /* HPGradientLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C5CEC2271B16A009193CD /* HPGradientLoadingTests.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGradientLoading.swift; sourceTree = "<group>"; };
 		0E1B40812271FC4000A6757A /* GradientArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientArcView.swift; sourceTree = "<group>"; };
 		0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPGradientLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6C5CE12271B16A009193CD /* HPGradientLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPGradientLoading.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				0E6C5D072271B1CB009193CD /* LaunchScreen.storyboard */,
 				0E6C5D0A2271B1CB009193CD /* Info.plist */,
 				0E1B40812271FC4000A6757A /* GradientArcView.swift */,
+				0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */,
 			);
 			path = HPGradientLoadingExample;
 			sourceTree = "<group>";
@@ -186,7 +189,6 @@
 				B2BA002EC7AD74F5185C6BDA /* Pods-HPGradientLoadingTests.debug.xcconfig */,
 				863071AC4256BE460FDE9747 /* Pods-HPGradientLoadingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -382,12 +384,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HPGradientLoadingExample/Pods-HPGradientLoadingExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -506,6 +510,7 @@
 			files = (
 				0E6C5D012271B1C8009193CD /* ViewController.swift in Sources */,
 				0E1B40822271FC4000A6757A /* GradientArcView.swift in Sources */,
+				0E01F7602272F002005E2CD7 /* HPGradientLoading.swift in Sources */,
 				0E6C5CFF2271B1C8009193CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

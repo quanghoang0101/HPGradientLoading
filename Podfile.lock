@@ -1,16 +1,20 @@
 PODS:
   - SnapKit (5.0.0)
+  - VisualEffectView (4.0.0)
 
 DEPENDENCIES:
   - SnapKit
+  - VisualEffectView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SnapKit
+    - VisualEffectView
 
 SPEC CHECKSUMS:
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  VisualEffectView: 9e9883f07d8a929b98c9c08a068f726279d92754
 
-PODFILE CHECKSUM: 980f80cc9f1dd0ad31512a249e921990485a49f8
+PODFILE CHECKSUM: 7ce59b02f8e220827e3e0b358d04895b4a05e45f
 
 COCOAPODS: 1.6.1

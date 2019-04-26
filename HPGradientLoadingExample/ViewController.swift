@@ -8,25 +8,29 @@
 
 import UIKit
 import SnapKit
+import VisualEffectView
 
 class ViewController: UIViewController {
 
-    lazy var gradientView: GradientArcView = {
-        let view = GradientArcView(frame: .zero)
-        self.view.addSubview(view)
-        view.snp.makeConstraints({ (maker) in
-            maker.width.height.equalTo(100)
-            maker.centerX.centerY.equalToSuperview()
-        })
-        return view
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.gradientView.backgroundColor = .clear
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
 
+    // MARK: - Actions
+    @IBAction private func showLoadingWithTitle(_ sender: Any) {
+        HPGradientLoading.shared.show(with: "Loading...")
+    }
+
+    @IBAction private func showLoadingWithEmptyTitle(_ sender: Any) {
+        HPGradientLoading.shared.show()
+    }
 }
 

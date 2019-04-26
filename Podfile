@@ -25,5 +25,7 @@ target 'HPGradientLoadingExample' do
 
   # Pods for HPGradientLoadingExample
   pod 'SnapKit'
+  pod 'VisualEffectView'
+
 
 end
