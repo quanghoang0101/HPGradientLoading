@@ -157,4 +157,4 @@ Forks, patches and other feedback are welcome.
 [Blog](https://medium.com/@phanquanghoang)
 
 ## License
-HPFloatMenu is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
+HPGradientLoading is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
