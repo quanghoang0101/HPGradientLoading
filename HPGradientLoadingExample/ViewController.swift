@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         HPGradientLoading.shared.configation.isEnableDismissWhenTap = true
-        HPGradientLoading.shared.configation.isBlurBackground = false
+        HPGradientLoading.shared.configation.isBlurBackground = true
         HPGradientLoading.shared.configation.durationAnimation = 1.0
         HPGradientLoading.shared.configation.fontTitleLoading = UIFont.systemFont(ofSize: 20)
 
