@@ -1,5 +1,17 @@
 # HPGradientLoading
 
+[![Platform](http://img.shields.io/badge/platform-iOS-blue.svg?style=flat
+)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat
+)](https://developer.apple.com/swift)
+[![Version](https://img.shields.io/cocoapods/v/HPGradientLoading.svg?style=flat)](https://cocoapods.org/pods/HPGradientLoading)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+[![Issues](https://img.shields.io/github/issues/quanghoang0101/HPGradientLoading.svg?style=flat
+)](https://github.com/quanghoang0101/HPGradientLoading/issues?state=open)
+![Build](https://travis-ci.com/quanghoang0101/HPGradientLoading.svg?branch=master)
+[![codecov](https://codecov.io/gh/quanghoang0101/HPGradientLoading/branch/master/graph/badge.svg)](https://codecov.io/gh/quanghoang0101/HPGradientLoading)
+
 HPGradientLoading is awesome library for loading activity in iOS application
 
 ![sample](https://media.giphy.com/media/elsbhaHPxQZMQ4sJmg/giphy.gif)
