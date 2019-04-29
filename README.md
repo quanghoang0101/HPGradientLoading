@@ -107,7 +107,8 @@ func dismiss()
 ### Setup
 Add `import HPGradientLoading` in your file
 
-```import UIKit
+```Swift
+import UIKit
 import HPGradientLoading
 
 class ViewController: UIViewController {
