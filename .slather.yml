@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: HPGradientLoading.xcworkspace
+scheme: HPGradientLoading
+output_directory: reports
+ignore:
+  - HPGradientLoadingTests/*

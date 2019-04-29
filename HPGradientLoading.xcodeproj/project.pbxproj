@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E01F7602272F002005E2CD7 /* HPGradientLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */; };
-		0E1B40822271FC4000A6757A /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcView.swift */; };
+		0E25B785227723CC001502C3 /* HPGradientLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */; };
+		0E25B786227723CC001502C3 /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcView.swift */; };
 		0E6C5CE82271B16A009193CD /* HPGradientLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */; };
 		0E6C5CED2271B16A009193CD /* HPGradientLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C5CEC2271B16A009193CD /* HPGradientLoadingTests.swift */; };
 		0E6C5CEF2271B16A009193CD /* HPGradientLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E6C5CE12271B16A009193CD /* HPGradientLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -140,6 +140,8 @@
 			children = (
 				0E6C5CE12271B16A009193CD /* HPGradientLoading.h */,
 				0E6C5CE22271B16A009193CD /* Info.plist */,
+				0E1B40812271FC4000A6757A /* GradientArcView.swift */,
+				0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */,
 			);
 			path = HPGradientLoading;
 			sourceTree = "<group>";
@@ -162,8 +164,6 @@
 				0E6C5D052271B1CB009193CD /* Assets.xcassets */,
 				0E6C5D072271B1CB009193CD /* LaunchScreen.storyboard */,
 				0E6C5D0A2271B1CB009193CD /* Info.plist */,
-				0E1B40812271FC4000A6757A /* GradientArcView.swift */,
-				0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */,
 			);
 			path = HPGradientLoadingExample;
 			sourceTree = "<group>";
@@ -493,6 +493,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E25B785227723CC001502C3 /* HPGradientLoading.swift in Sources */,
+				0E25B786227723CC001502C3 /* GradientArcView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,8 +511,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6C5D012271B1C8009193CD /* ViewController.swift in Sources */,
-				0E1B40822271FC4000A6757A /* GradientArcView.swift in Sources */,
-				0E01F7602272F002005E2CD7 /* HPGradientLoading.swift in Sources */,
 				0E6C5CFF2271B1C8009193CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +734,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2BA002EC7AD74F5185C6BDA /* Pods-HPGradientLoadingTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HPGradientLoadingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -752,6 +753,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 863071AC4256BE460FDE9747 /* Pods-HPGradientLoadingTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HPGradientLoadingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

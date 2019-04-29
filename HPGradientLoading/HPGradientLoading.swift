@@ -10,9 +10,40 @@ import UIKit
 import SnapKit
 import VisualEffectView
 
+public struct Conguration {
+    public var isBlurBackground: Bool = true
+    public var isBlurLoadingActivity: Bool = true
+
+    public var isEnableDismissWhenTap: Bool = false
+    
+    public var sizeOfLoadingActivity: CGFloat = 70.0
+    public var gradientColors: [UIColor] = [.white, .blue]
+    public var durationAnimation: TimeInterval = 1.5
+
+    // Loading activity properties
+    public var blurColorTintActivity: UIColor = .white
+    public var blurColorTintAlphaActivity: CGFloat = 0.8
+    public var blurRadiusActivity: CGFloat = 8.0
+
+    public var cornerRadiusActivity: CGFloat = 8.0
+    public var gradientLineWidth: CGFloat = 3.0
+
+    // Background properties
+    public var blurColorTintBackground: UIColor = .white
+    public var blurColorTintAlphaBackground: CGFloat = 0.2
+    public var blurRadiusBackground: CGFloat = 8.0
+
+    public var colorTitleLoading: UIColor = .blue
+    public var fontTitleLoading: UIFont = UIFont.systemFont(ofSize: 18)
+
+    public init() {}
+}
+
 public class HPGradientLoading {
     
     public static let shared = HPGradientLoading()
+
+    public var configation = Conguration()
 
     // MARK: - UI
     private lazy var windowView: UIWindow? = {
@@ -35,16 +66,12 @@ public class HPGradientLoading {
     private lazy var overlayView: VisualEffectView = {
         let effect = UIBlurEffect(style: .light)
         let visualEffectView = VisualEffectView(effect: effect)
-//        visualEffectView.colorTint = .white
-//        visualEffectView.colorTintAlpha = 0.2
-//        visualEffectView.blurRadius = 8
-
         return visualEffectView
     }()
 
     private lazy var subViewContainer: UIView = {
         let view = UIView(frame: .zero)
-        view.layer.cornerRadius = 8
+        view.layer.cornerRadius = self.configation.cornerRadiusActivity
         view.layer.borderWidth = 0
         view.layer.masksToBounds = true
         view.layer.borderColor = UIColor.clear.cgColor
@@ -60,9 +87,9 @@ public class HPGradientLoading {
     private lazy var loadingOverlayViewContainer: VisualEffectView = {
         let effect = UIBlurEffect(style: .light)
         let visualEffectView = VisualEffectView(frame: .zero)
-        visualEffectView.colorTint = .white
-        visualEffectView.colorTintAlpha = 0.6
-        visualEffectView.blurRadius = 10
+        visualEffectView.colorTint = self.configation.blurColorTintActivity
+        visualEffectView.colorTintAlpha = self.configation.blurColorTintAlphaActivity
+        visualEffectView.blurRadius = self.configation.blurRadiusActivity
         subViewContainer.addSubview(visualEffectView)
         visualEffectView.snp.makeConstraints({ (maker) in
             maker.leading.trailing.top.bottom.equalToSuperview()
@@ -72,7 +99,7 @@ public class HPGradientLoading {
 
     private lazy var loadingView: GradientArcView = {
         let view = GradientArcView(frame: .zero)
-        view.colors = [.red, .green, .blue]
+        view.colors = self.configation.gradientColors
         subViewContainer.addSubview(view)
         view.snp.makeConstraints { (maker) in
             maker.leading.greaterThanOrEqualTo(30).priority(750)
@@ -80,7 +107,7 @@ public class HPGradientLoading {
             maker.centerX.equalToSuperview()
             maker.top.equalTo(30)
             maker.bottom.equalTo(titleLoading.snp.top).offset(-16)
-            maker.height.width.equalTo(100)
+            maker.height.width.equalTo(self.configation.sizeOfLoadingActivity)
         }
         return view
     }()
@@ -88,7 +115,7 @@ public class HPGradientLoading {
     private lazy var titleLoading: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Loading..."
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = self.configation.fontTitleLoading
         label.numberOfLines = 0
         label.textAlignment = .center
         subViewContainer.addSubview(label)
@@ -109,19 +136,47 @@ public class HPGradientLoading {
         containerView.snp.makeConstraints { (maker) in
             maker.leading.trailing.top.bottom.equalToSuperview()
         }
+    }
 
-        self.subViewContainer.backgroundColor = .clear
-        self.loadingOverlayViewContainer.backgroundColor = .clear
-        self.loadingView.backgroundColor = .clear
-        self.titleLoading.textColor = .darkText
+    private func applyStyle() {
+        // Blur background
+        if self.configation.isBlurBackground {
+            self.overlayView.colorTint = self.configation.blurColorTintBackground
+            self.overlayView.colorTintAlpha = self.configation.blurColorTintAlphaBackground
+            self.overlayView.blurRadius = self.configation.blurRadiusBackground
+        } else {
+            self.overlayView.colorTint = .clear
+            self.overlayView.colorTintAlpha = 1
+            self.overlayView.blurRadius = 0
+        }
+
+        // Blur loading activity
+        if self.configation.isBlurLoadingActivity {
+            self.loadingOverlayViewContainer.colorTint = self.configation.blurColorTintActivity
+            self.loadingOverlayViewContainer.colorTintAlpha = self.configation.blurColorTintAlphaActivity
+            self.loadingOverlayViewContainer.blurRadius = self.configation.blurRadiusActivity
+        } else {
+            self.loadingOverlayViewContainer.colorTint = .clear
+            self.loadingOverlayViewContainer.colorTintAlpha = 1
+            self.loadingOverlayViewContainer.blurRadius = 0
+        }
+
+        self.loadingView.colors = self.configation.gradientColors
+        self.loadingView.lineWidth = self.configation.gradientLineWidth
+        self.loadingView.duration = self.configation.durationAnimation
+        self.loadingView.layoutSubviews()
+
+        self.titleLoading.textColor = self.configation.colorTitleLoading
+        self.titleLoading.font = self.configation.fontTitleLoading
+
     }
 
     // MARK: - Actions
     public func show() {
         self.makeContraints()
-        self.containerView.alpha = 1
+        self.applyStyle()
+
         self.titleLoading.text = nil
-        self.loadingView.layoutSubviews()
 
         self.loadingView.snp.updateConstraints { (maker) in
             maker.bottom.equalTo(titleLoading.snp.top).offset(0)
@@ -130,9 +185,9 @@ public class HPGradientLoading {
 
     public func show(with title: String) {
         self.makeContraints()
-        self.containerView.alpha = 1
+        self.applyStyle()
+
         self.titleLoading.text = title
-        self.loadingView.layoutSubviews()
 
         self.loadingView.snp.updateConstraints { (maker) in
             maker.bottom.equalTo(titleLoading.snp.top).offset(-16)
@@ -144,6 +199,8 @@ public class HPGradientLoading {
     }
 
     @objc private func dismiss(_ sender: Any) {
-        self.dismiss()
+        if self.configation.isEnableDismissWhenTap {
+            self.dismiss()
+        }
     }
 }

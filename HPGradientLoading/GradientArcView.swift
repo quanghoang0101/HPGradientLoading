@@ -12,6 +12,7 @@ class GradientArcView: UIView {
 
     var lineWidth: CGFloat = 3 { didSet { setNeedsLayout() } }
     var colors: [UIColor] = [.white, .blue] { didSet { setNeedsLayout() } }
+    var duration: TimeInterval = 1.5 { didSet { setNeedsLayout() }}
 
     private let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
@@ -62,7 +63,7 @@ class GradientArcView: UIView {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = Double.pi*2
-        rotationAnimation.duration = 1.5
+        rotationAnimation.duration = duration
         rotationAnimation.repeatCount = .infinity
         gradientLayer.add(rotationAnimation, forKey: nil)
     }

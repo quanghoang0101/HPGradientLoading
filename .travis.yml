@@ -1,0 +1,13 @@
+language: swift
+
+osx_image: xcode10.2
+
+before_install:
+- pod repo update
+
+script:
+  - xcodebuild -scheme HPGradientLoading -workspace HPGradientLoading.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2' build test
+
+after_success:
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode

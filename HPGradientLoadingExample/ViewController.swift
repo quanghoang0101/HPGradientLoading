@@ -16,11 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        HPGradientLoading.shared.configation.isEnableDismissWhenTap = true
+        HPGradientLoading.shared.configation.isBlurBackground = true
 
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        HPGradientLoading.shared.dismiss()
     }
 
 
