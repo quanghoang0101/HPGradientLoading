@@ -1,8 +1,12 @@
 PODS:
+  - HPGradientLoading (1.0.0):
+    - SnapKit (~> 5.0.0)
+    - VisualEffectView (~> 4.0.0)
   - SnapKit (5.0.0)
   - VisualEffectView (4.0.0)
 
 DEPENDENCIES:
+  - HPGradientLoading (from `../HPGradientLoading`)
   - SnapKit
   - VisualEffectView
 
@@ -11,10 +15,15 @@ SPEC REPOS:
     - SnapKit
     - VisualEffectView
 
+EXTERNAL SOURCES:
+  HPGradientLoading:
+    :path: "../HPGradientLoading"
+
 SPEC CHECKSUMS:
+  HPGradientLoading: 8dd9ffacfe4d3d5a44681056cdd9f628189509b7
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   VisualEffectView: 9e9883f07d8a929b98c9c08a068f726279d92754
 
-PODFILE CHECKSUM: 7ce59b02f8e220827e3e0b358d04895b4a05e45f
+PODFILE CHECKSUM: e289d957c871eb780cee70959ac011990d5a9bf4
 
 COCOAPODS: 1.6.1

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import SnapKit
-import VisualEffectView
+import HPGradientLoading
 
 class ViewController: UIViewController {
 
@@ -18,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         HPGradientLoading.shared.configation.isEnableDismissWhenTap = true
         HPGradientLoading.shared.configation.isBlurBackground = true
+        HPGradientLoading.shared.configation.durationAnimation = 1.0
 
     }
 

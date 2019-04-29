@@ -10,35 +10,6 @@ import UIKit
 import SnapKit
 import VisualEffectView
 
-public struct Conguration {
-    public var isBlurBackground: Bool = true
-    public var isBlurLoadingActivity: Bool = true
-
-    public var isEnableDismissWhenTap: Bool = false
-    
-    public var sizeOfLoadingActivity: CGFloat = 70.0
-    public var gradientColors: [UIColor] = [.white, .blue]
-    public var durationAnimation: TimeInterval = 1.5
-
-    // Loading activity properties
-    public var blurColorTintActivity: UIColor = .white
-    public var blurColorTintAlphaActivity: CGFloat = 0.8
-    public var blurRadiusActivity: CGFloat = 8.0
-
-    public var cornerRadiusActivity: CGFloat = 8.0
-    public var gradientLineWidth: CGFloat = 3.0
-
-    // Background properties
-    public var blurColorTintBackground: UIColor = .white
-    public var blurColorTintAlphaBackground: CGFloat = 0.2
-    public var blurRadiusBackground: CGFloat = 8.0
-
-    public var colorTitleLoading: UIColor = .blue
-    public var fontTitleLoading: UIFont = UIFont.systemFont(ofSize: 18)
-
-    public init() {}
-}
-
 public class HPGradientLoading {
     
     public static let shared = HPGradientLoading()
