@@ -143,7 +143,7 @@ class ViewController: UIViewController {
 ## Requirements
 Swift 5.0
 
-iOS 12.0+
+iOS 10.0+
 
 Xcode 10.2+
 
