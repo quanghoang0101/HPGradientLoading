@@ -6,7 +6,7 @@ before_install:
 - pod repo update
 
 script:
-  - xcodebuild -scheme HPGradientLoading -workspace HPGradientLoading.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2' build test
+  - xcodebuild test -enableCodeCoverage YES -scheme HPGradientLoading -workspace HPGradientLoading.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2'
 
 after_success:
   - slather
