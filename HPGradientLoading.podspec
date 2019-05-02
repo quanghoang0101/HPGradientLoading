@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "HPGradientLoading"
-  spec.version      = "1.0.1"
+  spec.version      = "1.1.0"
   spec.summary      = "HPGradientLoading is awesome library for loading activity in iOS application"
   spec.description  = "The library for loading activity with cool animation, blur and gradient, easy integrate and custom for iOS application."
   spec.homepage     = "https://github.com/quanghoang0101/HPGradientLoading"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Hoang" => "quanghoang0101@yahoo.com.vn" }
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "10.0"
   spec.source       = { :git => "https://github.com/quanghoang0101/HPGradientLoading.git", :tag => "#{spec.version}" }
   spec.source_files  = "HPGradientLoading/**/*.{swift}"
   spec.dependency "SnapKit", "~> 5.0.0"

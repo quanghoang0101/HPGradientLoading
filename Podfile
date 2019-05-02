@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'
+platform :ios, '10.0'
 
 target 'HPGradientLoading' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -26,6 +26,6 @@ target 'HPGradientLoadingExample' do
   use_frameworks!
 
   # Pods for HPGradientLoadingExample
-  # pod 'HPGradientLoading', :path => '../HPGradientLoading'
-  pod 'HPGradientLoading'
+  pod 'HPGradientLoading', :path => '../HPGradientLoading'
+  #pod 'HPGradientLoading'
 end

@@ -16,9 +16,16 @@ class GradientArcView: UIView {
 
     private let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.type = .conic
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        if #available(iOS 12.0, *) {
+            gradientLayer.type = .conic
+            gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        } else {
+            // Fallback on earlier versions
+            gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0, y: 0)
+        }
+
         return gradientLayer
     }()
 
