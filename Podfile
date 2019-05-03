@@ -9,11 +9,6 @@ target 'HPGradientLoading' do
   pod 'VisualEffectView'
   pod 'SnapKit'
 
-  target 'HPGradientLoadingExampleTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
   target 'HPGradientLoadingTests' do
     inherit! :search_paths
     # Pods for testing
