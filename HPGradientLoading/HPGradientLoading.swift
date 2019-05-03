@@ -10,11 +10,15 @@ import UIKit
 import SnapKit
 import VisualEffectView
 
+private let maxWidthLoadingView = UIScreen.main.bounds.width - 100
+
 public class HPGradientLoading {
     
     public static let shared = HPGradientLoading()
 
     public var configation = Conguration()
+
+    private var title: String! = ""
 
     // MARK: - UI
     private lazy var windowView: UIWindow? = {
@@ -27,7 +31,6 @@ public class HPGradientLoading {
         view.addSubview(overlayView)
         overlayView.snp.makeConstraints({ (maker) in
             maker.leading.trailing.top.bottom.equalToSuperview()
-            maker.width.equalTo(view.snp.height).priority(750)
         })
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))
         view.addGestureRecognizer(tapGesture)
@@ -49,7 +52,9 @@ public class HPGradientLoading {
         containerView.addSubview(view)
         view.snp.makeConstraints({ (maker) in
             maker.centerX.centerY.equalToSuperview()
-            maker.width.equalTo(view.snp.height)
+            maker.width.equalTo(self.configation.sizeOfLoadingActivity + 60).priority(650)
+            maker.width.equalTo(maxWidthLoadingView).priority(650)
+            maker.width.equalTo(view.snp.height).priority(650)
         })
 
         return view
@@ -73,8 +78,6 @@ public class HPGradientLoading {
         view.colors = self.configation.gradientColors
         subViewContainer.addSubview(view)
         view.snp.makeConstraints { (maker) in
-            maker.leading.greaterThanOrEqualTo(30).priority(750)
-            maker.trailing.greaterThanOrEqualTo(-30).priority(750)
             maker.centerX.equalToSuperview()
             maker.top.equalTo(30)
             maker.bottom.equalTo(titleLoading.snp.top).offset(-16)
@@ -91,11 +94,12 @@ public class HPGradientLoading {
         label.textAlignment = .center
         subViewContainer.addSubview(label)
         label.snp.makeConstraints({ (maker) in
-            maker.leading.equalTo(30).priority(500)
-            maker.trailing.equalTo(-30).priority(500)
+            maker.leading.equalTo(30).priority(800)
+            maker.trailing.equalTo(-30).priority(800)
             maker.centerX.equalToSuperview()
             maker.bottom.equalTo(-30)
         })
+        label.setContentHuggingPriority(UILayoutPriority(752), for: .vertical)
         return label
     }()
 
@@ -137,17 +141,34 @@ public class HPGradientLoading {
         self.loadingView.duration = self.configation.durationAnimation
         self.loadingView.layoutSubviews()
 
+        self.titleLoading.text = self.title
         self.titleLoading.textColor = self.configation.colorTitleLoading
         self.titleLoading.font = self.configation.fontTitleLoading
 
+        let widthOfString = self.title.widthOfString(usingFont: self.configation.fontTitleLoading)
+        let fullWidthString = widthOfString + 60
+        if fullWidthString > UIScreen.main.bounds.width - 100 {
+            subViewContainer.snp.remakeConstraints({ (maker) in
+                maker.centerX.centerY.equalToSuperview()
+                maker.width.equalTo(self.configation.sizeOfLoadingActivity + 60).priority(650)
+                maker.width.equalTo(maxWidthLoadingView).priority(800)
+                maker.width.equalTo(subViewContainer.snp.height).priority(650)
+            })
+        } else {
+            subViewContainer.snp.remakeConstraints({ (maker) in
+                maker.centerX.centerY.equalToSuperview()
+                maker.width.equalTo(self.configation.sizeOfLoadingActivity + 60).priority(650)
+                maker.width.equalTo(maxWidthLoadingView).priority(650)
+                maker.width.equalTo(subViewContainer.snp.height).priority(650)
+            })
+        }
     }
 
     // MARK: - Actions
     public func show() {
         self.makeContraints()
+        self.title = ""
         self.applyStyle()
-
-        self.titleLoading.text = nil
 
         self.loadingView.snp.updateConstraints { (maker) in
             maker.bottom.equalTo(titleLoading.snp.top).offset(0)
@@ -156,9 +177,8 @@ public class HPGradientLoading {
 
     public func show(with title: String) {
         self.makeContraints()
+        self.title = title
         self.applyStyle()
-
-        self.titleLoading.text = title
 
         self.loadingView.snp.updateConstraints { (maker) in
             maker.bottom.equalTo(titleLoading.snp.top).offset(-16)

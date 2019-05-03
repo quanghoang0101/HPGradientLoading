@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "HPGradientLoading"
-  spec.version      = "1.1.0"
+  spec.version      = "1.2.0"
   spec.summary      = "HPGradientLoading is awesome library for loading activity in iOS application"
   spec.description  = "The library for loading activity with cool animation, blur and gradient, easy integrate and custom for iOS application."
   spec.homepage     = "https://github.com/quanghoang0101/HPGradientLoading"

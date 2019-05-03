@@ -11,6 +11,7 @@
 		0E25B786227723CC001502C3 /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcView.swift */; };
 		0E25B78822772AED001502C3 /* Conguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B78722772AED001502C3 /* Conguration.swift */; };
 		0E3809D7227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3809D6227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework */; };
+		0E3809D9227C9B980073DD17 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3809D8227C9B980073DD17 /* String+Extensions.swift */; };
 		0E6C5CE82271B16A009193CD /* HPGradientLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */; };
 		0E6C5CED2271B16A009193CD /* HPGradientLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C5CEC2271B16A009193CD /* HPGradientLoadingTests.swift */; };
 		0E6C5CEF2271B16A009193CD /* HPGradientLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E6C5CE12271B16A009193CD /* HPGradientLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,6 +22,7 @@
 		0E6C5D092271B1CB009193CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C5D072271B1CB009193CD /* LaunchScreen.storyboard */; };
 		1CFC2531F8428B234AEC5AFC /* Pods_HPGradientLoadingExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C3B82D53D8488F6188DBE /* Pods_HPGradientLoadingExample.framework */; };
 		5067248445BB28A6129A722B /* libPods-HPGradientLoading.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE50E20EADB69721840AA82A /* libPods-HPGradientLoading.a */; };
+		BCD5E3B3BFFD23CA06F5105C /* libPods-HPGradientLoadingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA034344CCEB5F65F2A8C953 /* libPods-HPGradientLoadingTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		0E1B40812271FC4000A6757A /* GradientArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientArcView.swift; sourceTree = "<group>"; };
 		0E25B78722772AED001502C3 /* Conguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conguration.swift; sourceTree = "<group>"; };
 		0E3809D6227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_HPGradientLoadingExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E3809D8227C9B980073DD17 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0E6C5CDE2271B16A009193CD /* HPGradientLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPGradientLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6C5CE12271B16A009193CD /* HPGradientLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPGradientLoading.h; sourceTree = "<group>"; };
 		0E6C5CE22271B16A009193CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			files = (
 				0E3809D7227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework in Frameworks */,
 				0E6C5CE82271B16A009193CD /* HPGradientLoading.framework in Frameworks */,
+				BCD5E3B3BFFD23CA06F5105C /* libPods-HPGradientLoadingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +138,7 @@
 				0E1B40812271FC4000A6757A /* GradientArcView.swift */,
 				0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */,
 				0E25B78722772AED001502C3 /* Conguration.swift */,
+				0E3809D8227C9B980073DD17 /* String+Extensions.swift */,
 			);
 			path = HPGradientLoading;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E3809D9227C9B980073DD17 /* String+Extensions.swift in Sources */,
 				0E25B785227723CC001502C3 /* HPGradientLoading.swift in Sources */,
 				0E25B786227723CC001502C3 /* GradientArcView.swift in Sources */,
 				0E25B78822772AED001502C3 /* Conguration.swift in Sources */,
