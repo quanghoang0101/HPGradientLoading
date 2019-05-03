@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction private func showLoadingWithTitle(_ sender: Any) {
-        HPGradientLoading.shared.show(with: "Loading... ") //
+        HPGradientLoading.shared.show(with: "Loading... Heheheeee Heheheeee") //
     }
 
     @IBAction private func showLoadingWithEmptyTitle(_ sender: Any) {
