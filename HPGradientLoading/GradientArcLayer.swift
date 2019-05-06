@@ -15,12 +15,7 @@ class GradientArcLayer: CALayer {
     var lineWidth: CGFloat = 3 {
         didSet { setNeedsDisplay() }
     }
-    var startColor: UIColor = .blue {
-        didSet {setNeedsDisplay()}
-    }
-    var endColor: UIColor = .white {
-        didSet {setNeedsDisplay()}
-    }
+
     var numSegments: Int = 2 {
         didSet {
             _numSegments = max(2, numSegments)
@@ -34,6 +29,9 @@ class GradientArcLayer: CALayer {
         }
     }
 
+    var startColor: UIColor = .blue
+    var endColor: UIColor = .white
+    
     private var _numSegments: Int = 2
 
     @NSManaged private var _progress: CGFloat
@@ -122,7 +120,7 @@ class GradientArcLayer: CALayer {
     func configure() {
         self.isOpaque = false
         self.progress = 0
-        self.numSegments = 2
+        self.numSegments = 16
         self.startAngle = -.pi/2
         self.endAngle = 2 * .pi - .pi/2
     }

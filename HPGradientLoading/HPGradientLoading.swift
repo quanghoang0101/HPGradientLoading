@@ -53,6 +53,7 @@ public class HPGradientLoading {
         view.layer.borderWidth = 0
         view.layer.masksToBounds = true
         view.layer.borderColor = UIColor.clear.cgColor
+        view.setGradientColor(formColor: self.configation.fromColor, toColor: self.configation.toColor)
         containerView.addSubview(view)
         view.snp.makeConstraints({ (maker) in
             maker.centerX.centerY.equalToSuperview()

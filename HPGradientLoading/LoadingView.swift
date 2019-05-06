@@ -239,5 +239,6 @@ class LoadingView: UIView {
     func setGradientColor(formColor: UIColor, toColor: UIColor) {
         self.circleLayer.startColor = formColor
         self.circleLayer.endColor = toColor
+        self.circleLayer.setNeedsDisplay()
     }
 }
