@@ -102,6 +102,8 @@ public class HPGradientLoading {
         self.loadingViewContainer.colorTitleLoading = self.configation.colorTitleLoading
         self.loadingViewContainer.fontOfLoading = self.configation.fontTitleLoading
 
+        self.loadingViewContainer.setGradientColor(formColor: self.configation.fromColor, toColor: self.configation.toColor)
+
         let widthOfString = self.title.widthOfString(usingFont: self.configation.fontTitleLoading)
         let fullWidthString = widthOfString + 60
         if fullWidthString > UIScreen.main.bounds.width - 100 {
@@ -130,7 +132,6 @@ public class HPGradientLoading {
         self.loadingViewContainer.isEmptyTitleLoading = self.title.isEmpty
         self.loadingViewContainer.isHiddenProcessing = true
 
-        self.loadingViewContainer.setGradientColor(formColor: self.configation.fromColor, toColor: self.configation.toColor)
         self.setProgress(80, duration: 0.0, animation: false)
         self.loadingViewContainer.rotateInfinity(duration: self.configation.durationAnimation)
     }
@@ -153,7 +154,6 @@ public class HPGradientLoading {
         self.title = loadingTitle ?? ""
 
         self.applyStyle()
-        self.loadingViewContainer.setGradientColor(formColor: self.configation.fromColor, toColor: self.configation.toColor)
         self.loadingViewContainer.resetProcessing()
 
         self.loadingViewContainer.isEmptyTitleLoading = self.title.isEmpty

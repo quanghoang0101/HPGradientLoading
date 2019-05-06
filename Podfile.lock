@@ -1,5 +1,5 @@
 PODS:
-  - HPGradientLoading (1.3.0):
+  - HPGradientLoading (1.3.1):
     - SnapKit (~> 5.0.0)
     - VisualEffectView (~> 4.0.0)
   - SnapKit (5.0.0)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :path: "../HPGradientLoading"
 
 SPEC CHECKSUMS:
-  HPGradientLoading: c2d92d97e11ceb334de0d2bf295384f008cb5396
+  HPGradientLoading: 4fc10dde4ef205d92c843c7bea576ebfa69b1594
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   VisualEffectView: 9e9883f07d8a929b98c9c08a068f726279d92754
 
