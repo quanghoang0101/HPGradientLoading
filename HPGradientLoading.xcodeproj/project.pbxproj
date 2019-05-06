@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E25B785227723CC001502C3 /* HPGradientLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */; };
-		0E25B786227723CC001502C3 /* GradientArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcView.swift */; };
+		0E25B786227723CC001502C3 /* GradientArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B40812271FC4000A6757A /* GradientArcLayer.swift */; };
 		0E25B78822772AED001502C3 /* Conguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B78722772AED001502C3 /* Conguration.swift */; };
 		0E3809D7227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3809D6227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework */; };
 		0E3809D9227C9B980073DD17 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3809D8227C9B980073DD17 /* String+Extensions.swift */; };
@@ -20,6 +20,8 @@
 		0E6C5D042271B1C9009193CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C5D022271B1C9009193CD /* Main.storyboard */; };
 		0E6C5D062271B1CB009193CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C5D052271B1CB009193CD /* Assets.xcassets */; };
 		0E6C5D092271B1CB009193CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C5D072271B1CB009193CD /* LaunchScreen.storyboard */; };
+		0EC0186B228084450050F303 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0186A228084450050F303 /* UIColor+Extensions.swift */; };
+		0EEF923222803C0C002403A7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF923122803C0C002403A7 /* LoadingView.swift */; };
 		1CFC2531F8428B234AEC5AFC /* Pods_HPGradientLoadingExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C3B82D53D8488F6188DBE /* Pods_HPGradientLoadingExample.framework */; };
 		5067248445BB28A6129A722B /* libPods-HPGradientLoading.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE50E20EADB69721840AA82A /* libPods-HPGradientLoading.a */; };
 		BCD5E3B3BFFD23CA06F5105C /* libPods-HPGradientLoadingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA034344CCEB5F65F2A8C953 /* libPods-HPGradientLoadingTests.a */; };
@@ -44,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGradientLoading.swift; sourceTree = "<group>"; };
-		0E1B40812271FC4000A6757A /* GradientArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientArcView.swift; sourceTree = "<group>"; };
+		0E1B40812271FC4000A6757A /* GradientArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientArcLayer.swift; sourceTree = "<group>"; };
 		0E25B78722772AED001502C3 /* Conguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conguration.swift; sourceTree = "<group>"; };
 		0E3809D6227BDC330073DD17 /* Pods_HPGradientLoadingExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_HPGradientLoadingExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E3809D8227C9B980073DD17 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		0E6C5D0A2271B1CB009193CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6C5D132271B1CB009193CD /* HPGradientLoadingExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGradientLoadingExampleTests.swift; sourceTree = "<group>"; };
 		0E6C5D152271B1CB009193CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EC0186A228084450050F303 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		0EEF923122803C0C002403A7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3D4C3B82D53D8488F6188DBE /* Pods_HPGradientLoadingExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPGradientLoadingExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A7DDA7F0615860F936C6A3 /* Pods-HPGradientLoadingExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoadingExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-HPGradientLoadingExampleTests/Pods-HPGradientLoadingExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		73357CFD6888F8C1F234A9BA /* Pods-HPGradientLoading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPGradientLoading.debug.xcconfig"; path = "Target Support Files/Pods-HPGradientLoading/Pods-HPGradientLoading.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,10 +139,11 @@
 			children = (
 				0E6C5CE12271B16A009193CD /* HPGradientLoading.h */,
 				0E6C5CE22271B16A009193CD /* Info.plist */,
-				0E1B40812271FC4000A6757A /* GradientArcView.swift */,
+				0E1B40812271FC4000A6757A /* GradientArcLayer.swift */,
 				0E01F75F2272F002005E2CD7 /* HPGradientLoading.swift */,
 				0E25B78722772AED001502C3 /* Conguration.swift */,
-				0E3809D8227C9B980073DD17 /* String+Extensions.swift */,
+				0EEF923122803C0C002403A7 /* LoadingView.swift */,
+				0EC018692280842A0050F303 /* Extensions */,
 			);
 			path = HPGradientLoading;
 			sourceTree = "<group>";
@@ -172,6 +177,15 @@
 				0E6C5D152271B1CB009193CD /* Info.plist */,
 			);
 			path = HPGradientLoadingExampleTests;
+			sourceTree = "<group>";
+		};
+		0EC018692280842A0050F303 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E3809D8227C9B980073DD17 /* String+Extensions.swift */,
+				0EC0186A228084450050F303 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2A81E598E07883DCF5262CB4 /* Pods */ = {
@@ -443,9 +457,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E3809D9227C9B980073DD17 /* String+Extensions.swift in Sources */,
+				0EC0186B228084450050F303 /* UIColor+Extensions.swift in Sources */,
 				0E25B785227723CC001502C3 /* HPGradientLoading.swift in Sources */,
-				0E25B786227723CC001502C3 /* GradientArcView.swift in Sources */,
+				0E25B786227723CC001502C3 /* GradientArcLayer.swift in Sources */,
 				0E25B78822772AED001502C3 /* Conguration.swift in Sources */,
+				0EEF923222803C0C002403A7 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

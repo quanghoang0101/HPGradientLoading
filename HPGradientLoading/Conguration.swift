@@ -16,7 +16,7 @@ public struct Conguration {
 
     public var sizeOfLoadingActivity: CGFloat = 70.0
     public var gradientColors: [UIColor] = [.white, .blue]
-    public var durationAnimation: TimeInterval = 1.5
+    public var durationAnimation: TimeInterval = 1.0
 
     // Loading activity properties
     public var blurColorTintActivity: UIColor = .white
@@ -33,6 +33,9 @@ public struct Conguration {
 
     public var colorTitleLoading: UIColor = .blue
     public var fontTitleLoading: UIFont = UIFont.systemFont(ofSize: 18)
+
+    public var colorTitleProcessing: UIColor = .blue
+    public var fontTitleProcessing: UIFont = UIFont.systemFont(ofSize: 15)
 
     public init() {}
 }
