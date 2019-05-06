@@ -41,9 +41,13 @@ var isEnableDismissWhenTap: Bool
 ```Swift
 var sizeOfLoadingActivity: CGFloat
 ```
-* Gradient colors
+* Gradient from color
 ```Swift
-var gradientColors: [UIColor]
+var fromColor: UIColor
+```
+* Gradient to color
+```Swift
+var toColor: UIColor
 ```
 * Duration animation
 ```Swift
