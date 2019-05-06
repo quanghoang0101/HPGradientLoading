@@ -14,7 +14,7 @@
 
 HPGradientLoading is awesome library for loading activity in iOS application
 
-![sample](https://media.giphy.com/media/elsbhaHPxQZMQ4sJmg/giphy.gif)
+![sample](https://media.giphy.com/media/IcjSzBdSDSrlyOhv0j/giphy.gif)
 
 # Installation
 #### CocoaPods
@@ -89,14 +89,26 @@ var colorTitleLoading: UIColor
 ```Swift
 var fontTitleLoading: UIFont
 ```
-## Actions
-* Show loading with title
+* Color for processing loading
 ```Swift
-func show(with title: String)
+var colorTitleProcessing: UIColor
 ```
-* Show loading with empty title
+* Font for title processing
 ```Swift
-func show()
+var fontTitleProcessing: UIFont
+```
+## Actions
+* Show loading
+```Swift
+func showLoading(with title: String? = nil)
+```
+* Show processing
+```Swift
+func showProcessing(with loadingTitle: String? = nil, percent: CGFloat, duration: TimeInterval = 0.1)
+```
+* Update processing
+```Swift
+func updateProcessing(with percent: CGFloat, duration: TimeInterval = 0.1)
 ```
 * Dismiss loading
 ```Swift
@@ -132,11 +144,22 @@ class ViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction private func showLoadingWithTitle(_ sender: Any) {
-        HPGradientLoading.shared.show(with: "Loading...")
+        HPGradientLoading.shared.showLoading(with: "Loading...")
     }
 
     @IBAction private func showLoadingWithEmptyTitle(_ sender: Any) {
-        HPGradientLoading.shared.show()
+        HPGradientLoading.shared.showLoading()
+    }
+
+    @IBAction private func showProcessing(_ sender: Any) {
+        self.percent = 0
+        HPGradientLoading.shared.showProcessing(with: "Loading...", percent: self.percent, duration: 0.15)
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
+            self.percent += 4
+            self.percent = self.percent > 100 ? 100 : self.percent
+            HPGradientLoading.shared.updateProcessing(with: self.percent)
+            if self.percent == 100 {timer.invalidate()}
+        })
     }
 }
 ```
