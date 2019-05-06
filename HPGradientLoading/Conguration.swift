@@ -15,7 +15,8 @@ public struct Conguration {
     public var isEnableDismissWhenTap: Bool = false
 
     public var sizeOfLoadingActivity: CGFloat = 70.0
-    public var gradientColors: [UIColor] = [.white, .blue]
+    public var fromColor: UIColor = .blue
+    public var toColor: UIColor = .white
     public var durationAnimation: TimeInterval = 1.0
 
     // Loading activity properties

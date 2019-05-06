@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         HPGradientLoading.shared.configation.isBlurLoadingActivity = true
         HPGradientLoading.shared.configation.durationAnimation = 1.5
         HPGradientLoading.shared.configation.fontTitleLoading = UIFont.systemFont(ofSize: 20)
-        //HPGradientLoading.shared.configation.gradientColors = [UIColor.blue, UIColor.blue]
+        HPGradientLoading.shared.configation.fromColor = .blue
+        HPGradientLoading.shared.configation.toColor = .white
 
     }
 
@@ -50,7 +51,6 @@ class ViewController: UIViewController {
             HPGradientLoading.shared.updateProcessing(with: self.percent)
             if self.percent == 100 {timer.invalidate()}
         })
-
     }
 }
 

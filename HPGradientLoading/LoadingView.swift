@@ -235,4 +235,9 @@ class LoadingView: UIView {
     func resetProcessing() {
         self.circleLayer.progress = 0
     }
+
+    func setGradientColor(formColor: UIColor, toColor: UIColor) {
+        self.circleLayer.startColor = formColor
+        self.circleLayer.endColor = toColor
+    }
 }
