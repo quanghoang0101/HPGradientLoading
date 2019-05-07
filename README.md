@@ -14,7 +14,7 @@
 
 HPGradientLoading is awesome library for loading activity in iOS application
 
-![sample](https://media.giphy.com/media/IcjSzBdSDSrlyOhv0j/giphy.gif)
+![sample](https://media.giphy.com/media/ZCZG1AqYpWG3ajEsjA/giphy.gif)
 
 # Installation
 #### CocoaPods
