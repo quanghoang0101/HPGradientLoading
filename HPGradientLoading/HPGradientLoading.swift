@@ -12,10 +12,6 @@ import VisualEffectView
 
 private let maxWidthLoadingView = UIScreen.main.bounds.width - 100
 
-class HPGradientPopup {
-
-}
-
 public class HPGradientLoading {
     
     public static let shared = HPGradientLoading()
@@ -47,7 +43,7 @@ public class HPGradientLoading {
         return visualEffectView
     }()
 
-    internal lazy var loadingViewContainer: LoadingView = {
+    private lazy var loadingViewContainer: LoadingView = {
         let view = LoadingView(frame: .zero)
         view.layer.cornerRadius = self.configation.cornerRadiusActivity
         view.layer.borderWidth = 0
@@ -103,7 +99,11 @@ public class HPGradientLoading {
         self.loadingViewContainer.colorTitleLoading = self.configation.colorTitleLoading
         self.loadingViewContainer.fontOfLoading = self.configation.fontTitleLoading
 
+        // Processing
         self.loadingViewContainer.setGradientColor(formColor: self.configation.fromColor, toColor: self.configation.toColor)
+        self.loadingViewContainer.isEmptyTitleLoading = self.title.isEmpty
+        self.loadingViewContainer.colorTitleProcessing = self.configation.colorTitleProcessing
+        self.loadingViewContainer.fontOfProcessing = self.configation.fontTitleProcessing
 
         let widthOfString = self.title.widthOfString(usingFont: self.configation.fontTitleLoading)
         let fullWidthString = widthOfString + 60
@@ -130,7 +130,7 @@ public class HPGradientLoading {
         self.makeContraints()
         self.title = title ?? ""
         self.applyStyle()
-        self.loadingViewContainer.isEmptyTitleLoading = self.title.isEmpty
+
         self.loadingViewContainer.isHiddenProcessing = true
 
         self.setProgress(80, duration: 0.0, animation: false)
@@ -139,8 +139,8 @@ public class HPGradientLoading {
 
     public func dismiss() {
         self.containerView.removeFromSuperview()
-        self.loadingViewContainer.abortAnimation()
         self.loadingViewContainer.resetProcessing()
+        self.loadingViewContainer.abortAnimation()
     }
 
     @objc private func dismiss(_ sender: Any) {
@@ -155,19 +155,13 @@ public class HPGradientLoading {
         self.title = loadingTitle ?? ""
 
         self.applyStyle()
-        self.loadingViewContainer.resetProcessing()
-
-        self.loadingViewContainer.isEmptyTitleLoading = self.title.isEmpty
-        self.loadingViewContainer.isHiddenProcessing = false
-
-        self.loadingViewContainer.abortAnimation()
 
         // Processing
         let percentString = String(format: "%.0f%%", percent)
         self.loadingViewContainer.textProcessing = percentString
-        self.loadingViewContainer.colorTitleProcessing = self.configation.colorTitleProcessing
-        self.loadingViewContainer.fontOfProcessing = self.configation.fontTitleProcessing
 
+        self.loadingViewContainer.isHiddenProcessing = false
+        self.loadingViewContainer.isEmptyTitleLoading = self.title.isEmpty
         self.loadingViewContainer.isHiddenProcessing = false
 
         self.setProgress(percent, duration: duration, animation: true)

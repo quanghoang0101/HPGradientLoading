@@ -29,13 +29,12 @@ class GradientArcLayer: CALayer {
         }
     }
 
-    var startColor: UIColor = .blue
-    var endColor: UIColor = .white
-    
-    private var _numSegments: Int = 2
-
+    // Animated
+    @NSManaged var startColor: UIColor!
+    @NSManaged var endColor: UIColor!
     @NSManaged private var _progress: CGFloat
 
+    private var _numSegments: Int = 2
     private var startAngle: CGFloat = -.pi/2
     private var endAngle: CGFloat = 2 * .pi - .pi/2
 
@@ -56,8 +55,10 @@ class GradientArcLayer: CALayer {
     override func draw(in ctx: CGContext) {
         super.draw(in: ctx)
 
-        self.drawWithSegments(_numSegments - 1, progress: _progress, in: ctx)
-        self.drawWithSegments(_numSegments, progress: _progress, in: ctx)
+        if self.startColor != nil, self.endColor != nil {
+            self.drawWithSegments(_numSegments - 1, progress: _progress, in: ctx)
+            self.drawWithSegments(_numSegments, progress: _progress, in: ctx)
+        }
     }
 
     override class func needsDisplay(forKey key: String) -> Bool {
@@ -78,6 +79,7 @@ class GradientArcLayer: CALayer {
 
         let endAngle = self.startAngle + durationAngle
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
+        
         let c1 = self.startColor.rgba
         let c2 = self.endColor.rgba
         var fromColor: UIColor = self.startColor

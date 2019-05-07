@@ -116,8 +116,6 @@ class LoadingView: UIView {
         layer.contentsScale = UIScreen.main.scale
         let size = self.sizeOfCircle
         layer.frame = CGRect(x: 0, y: 0, width: size, height: size)
-        layer.numSegments = 16
-        layer.progress = 1
         return layer
     }()
 
@@ -154,11 +152,6 @@ class LoadingView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.circleLayer.frame = loadingView.bounds
     }
 
     override class var layerClass: AnyClass {
@@ -200,23 +193,24 @@ class LoadingView: UIView {
     }
 
     func setProgress(_ progress: CGFloat, duration: TimeInterval, animation: Bool) {
+        let _progress = max(0, min(1, progress))
+
         if !animation {
-            self.circleLayer.progress = progress
+            self.circleLayer.progress = _progress
         } else {
+            let currentValue: CGFloat = self.circleLayer.progress
+            self.circleLayer.progress = _progress
 
+            let anim = CABasicAnimation(keyPath: "_progress")
+            anim.fromValue = currentValue
+            anim.toValue = progress
+            anim.duration = duration
+            anim.repeatCount = 0
+            anim.autoreverses = false
+            anim.isRemovedOnCompletion = true
+            anim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            self.circleLayer.add(anim, forKey: "_progress")
         }
-        let currentValue: CGFloat = self.circleLayer.progress
-        self.circleLayer.progress = progress
-
-        let anim = CABasicAnimation(keyPath: "_progress")
-        anim.fromValue = currentValue
-        anim.toValue = progress
-        anim.duration = duration
-        anim.repeatCount = 0
-        anim.autoreverses = false
-        anim.isRemovedOnCompletion = true
-        anim.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        self.circleLayer.add(anim, forKey: "_progress")
     }
 
     func rotateInfinity(duration: TimeInterval) {
@@ -229,7 +223,8 @@ class LoadingView: UIView {
     }
 
     func abortAnimation() {
-        self.circleLayer.removeAllAnimations()
+        self.circleLayer.removeAnimation(forKey: "_progress")
+        self.circleLayer.removeAnimation(forKey: "transform.rotation")
     }
 
     func resetProcessing() {
@@ -239,6 +234,5 @@ class LoadingView: UIView {
     func setGradientColor(formColor: UIColor, toColor: UIColor) {
         self.circleLayer.startColor = formColor
         self.circleLayer.endColor = toColor
-        self.circleLayer.setNeedsDisplay()
     }
 }
