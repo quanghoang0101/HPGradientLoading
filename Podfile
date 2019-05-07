@@ -21,6 +21,6 @@ target 'HPGradientLoadingExample' do
   use_frameworks!
 
   # Pods for HPGradientLoadingExample
-  pod 'HPGradientLoading', :path => '../HPGradientLoading'
-  # pod 'HPGradientLoading'
+  # pod 'HPGradientLoading', :path => '../HPGradientLoading'
+  pod 'HPGradientLoading'
 end
